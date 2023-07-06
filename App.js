@@ -1,23 +1,27 @@
 /* eslint-disable react-native/no-inline-styles */
-import {View, Text, Share} from 'react-native';
+import {View, Text, Share, ScrollView} from 'react-native';
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import ExploreText from './works/Text/ExploreText';
+import ExploreTextInput from './works/TextInput/ExploreTextInput';
+import ExploreImage from './works/Image/ExploreImage';
+import ExploreScrollView from './works/ScrollView/ExploreScrollView';
+import ExploreShare from './works/Share/ExploreShare';
+import ExploreAlert from './works/Alert/ExploreAlert';
+import ExploreButtons from './works/Button/ExploreButtons';
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-      {/* <Icon name="music" size={100} /> */}
-      <AntDesign
-        name="sharealt"
-        size={50}
-        color="green"
-        onPress={() => {
-          Share.share({message: '9876543210'});
-        }}
-      />
-    </View>
+    <ScrollView showsHorizontalScrollIndicator={false}>
+      <View style={{flexDirection: 'column'}}>
+        {/* <ExploreText /> */}
+        {/* <ExploreTextInput /> */}
+        {/* <ExploreImage /> */}
+        <ExploreScrollView />
+        {/* <ExploreShare /> */}
+        {/* <ExploreAlert /> */}
+        {/* <ExploreButtons /> */}
+      </View>
+    </ScrollView>
   );
 };
 

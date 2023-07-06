@@ -13,13 +13,13 @@ const App = () => {
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
       <View style={{flexDirection: 'column'}}>
-        {/* <ExploreText /> */}
-        {/* <ExploreTextInput /> */}
-        {/* <ExploreImage /> */}
+        <ExploreText />
+        <ExploreTextInput />
+        <ExploreImage />
         <ExploreScrollView />
-        {/* <ExploreShare /> */}
-        {/* <ExploreAlert /> */}
-        {/* <ExploreButtons /> */}
+        <ExploreShare />
+        <ExploreAlert />
+        <ExploreButtons />
       </View>
     </ScrollView>
   );

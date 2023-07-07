@@ -21,8 +21,8 @@ const App = () => {
       {/* <ExploreShare /> */}
       {/* <ExploreAlert /> */}
       {/* <ExploreButtons /> */}
-      {/* <ExploreModal /> */}
-      <ExploreBackgroundImage />
+      <ExploreModal />
+      {/* <ExploreBackgroundImage /> */}
     </>
   );
 };

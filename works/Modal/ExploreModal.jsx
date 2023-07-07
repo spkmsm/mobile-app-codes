@@ -1,60 +1,75 @@
 /* eslint-disable react-native/no-inline-styles */
-import {View, Text, Modal, Button, ImageBackground} from 'react-native';
+import {
+  View,
+  Text,
+  Modal,
+  Button,
+  ImageBackground,
+  TouchableOpacity,
+  StyleSheet,
+  Switch,
+} from 'react-native';
 import React, {useState} from 'react';
 
 const ExploreModal = () => {
   const [show, hide] = useState(false);
+  const [off, change] = useState(false);
+  console.log(off);
   return (
-    // <View
-    //   style={{
-    //     width: '100%',
-    //     height: '100%',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     backgroundColor: '#fffff',
-    //   }}>
-    //   <Modal visible={show} transparent={true} animationType="slide">
-    //     <View
-    //       style={{
-    //         width: '100%',
-    //         height: '100%',
-    //         justifyContent: 'center',
-    //         alignItems: 'center',
-    //         backgroundColor: '#fffff',
-    //       }}>
-    //       <View style={{width: 100, height: 100, backgroundColor: 'green'}}>
-    //         <Text>This is Modal</Text>
-    //         <Button
-    //           title="Close Modal"
-    //           onPress={() => {
-    //             hide(!show);
-    //           }}
-    //         />
-    //       </View>
-    //     </View>
-    //   </Modal>
-    //   <Button
-    //     title="Open Modal"
-    //     onPress={() => {
-    //       hide(!show);
-    //     }}
-    //   />
-    //   <ImageBackground
-    //     style={{flex: 1}}
-    //     source={{
-    //       uri: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80',
-    //     }}
-    //   />
-    // </View>
-    <ImageBackground
-      style={{flex: 1}}
-      resizeMode="cover"
-      source={{
-        uri: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80',
-      }}>
-      <Text>hello</Text>
-    </ImageBackground>
+    <View style={styles.outerBox}>
+      <TouchableOpacity
+        style={styles.myBtn}
+        onPress={() => {
+          hide(true);
+        }}>
+        <Text>Open My Modal</Text>
+      </TouchableOpacity>
+      <Modal visible={show} transparent>
+        <View style={[styles.outerBox, {backgroundColor: 'transparent'}]}>
+          <View style={styles.modalBox}>
+            <Text
+              style={{color: 'blue'}}
+              onPress={() => {
+                hide(false);
+              }}>
+              Click Here to close this
+            </Text>
+          </View>
+        </View>
+      </Modal>
+      <Switch
+        value={off}
+        onChange={() => {
+          // change(off === true ? false : true);
+          change(!off);
+        }}
+      />
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  outerBox: {
+    backgroundColor: 'lightgray',
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  myBtn: {
+    width: 150,
+    backgroundColor: 'white',
+    padding: 17,
+    borderRadius: 7,
+  },
+  modalBox: {
+    width: 200,
+    height: 200,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default ExploreModal;

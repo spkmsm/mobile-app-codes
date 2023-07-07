@@ -8,20 +8,22 @@ import ExploreScrollView from './works/ScrollView/ExploreScrollView';
 import ExploreShare from './works/Share/ExploreShare';
 import ExploreAlert from './works/Alert/ExploreAlert';
 import ExploreButtons from './works/Button/ExploreButtons';
+import ExploreModal from './works/Modal/ExploreModal';
+import ExploreBackgroundImage from './works/backgroundImage/ExploreBackgroundImage';
 
 const App = () => {
   return (
-    <ScrollView showsHorizontalScrollIndicator={false}>
-      <View style={{flexDirection: 'column'}}>
-        <ExploreText />
-        <ExploreTextInput />
-        <ExploreImage />
-        <ExploreScrollView />
-        <ExploreShare />
-        <ExploreAlert />
-        <ExploreButtons />
-      </View>
-    </ScrollView>
+    <>
+      {/* <ExploreText /> */}
+      {/* <ExploreTextInput /> */}
+      {/* <ExploreImage /> */}
+      {/* <ExploreScrollView /> */}
+      {/* <ExploreShare /> */}
+      {/* <ExploreAlert /> */}
+      {/* <ExploreButtons /> */}
+      {/* <ExploreModal /> */}
+      <ExploreBackgroundImage />
+    </>
   );
 };
 

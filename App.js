@@ -10,6 +10,7 @@ import ExploreAlert from './works/Alert/ExploreAlert';
 import ExploreButtons from './works/Button/ExploreButtons';
 import ExploreModal from './works/Modal/ExploreModal';
 import ExploreBackgroundImage from './works/backgroundImage/ExploreBackgroundImage';
+import ExploreTopNavigation from './works/TopNavigation/ExploreTopNavigation';
 
 const App = () => {
   return (
@@ -17,12 +18,13 @@ const App = () => {
       {/* <ExploreText /> */}
       {/* <ExploreTextInput /> */}
       {/* <ExploreImage /> */}
-      {/* <ExploreScrollView /> */}
       {/* <ExploreShare /> */}
+      {/* <ExploreScrollView /> */}
       {/* <ExploreAlert /> */}
       {/* <ExploreButtons /> */}
-      <ExploreModal />
+      {/* <ExploreModal /> */}
       {/* <ExploreBackgroundImage /> */}
+      <ExploreTopNavigation />
     </>
   );
 };
